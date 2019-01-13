@@ -8,5 +8,10 @@ describe Matrix do
       expect(matrix.extract_row(0)).to eql([1, 2])
     end
 
+    it "row[1] of '9 8 7 ; 19 18 17' is [19, 18, 17]" do
+      matrix = Matrix.new("9 8 7\n19 18 17")
+      expect(matrix.extract_row(1)).to eql([19, 18, 17])
+    end
+
   end
 end
