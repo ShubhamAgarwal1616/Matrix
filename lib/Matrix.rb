@@ -21,4 +21,19 @@ class Matrix
     row
   end
 
+  def extract_column(index)
+
+    matrix = @string.split("\n")
+    @no_of_rows = matrix.size
+    for each in (0..@no_of_rows-1) do
+      matrix[each] = matrix[each].split(" ")
+    end
+    column = []
+    @no_of_column = matrix[0].size
+    for each in (0..@no_of_rows-1) do
+      column << matrix[each][index].to_i
+    end
+    column
+  end
+  
 end
